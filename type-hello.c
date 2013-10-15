@@ -1,20 +1,20 @@
 #include <stdio.h>
 #define MAX_LEN 100
 
-//CipherText型生成
+//create type 'CipherText'
 typedef struct{
   int shift;
   char text[MAX_LEN];
 }CipherText;
 
-//変数宣言
+//declare variant
 int i;
 
-//関数宣言
+//declare function
 void cipher(const char* plain_text, int shift, CipherText* cipher);
 void decipher(const CipherText* cipher, char* plain_text);
 
-//暗号化関数cipher
+//coding function 'cipher'
 //input... ("HELLO WORLD", 3, &a)
 //output... &a->text: KHOOR#ZRUOG
 void cipher(const char* plain_text, int shift, CipherText* ioCipher){
@@ -28,7 +28,7 @@ void cipher(const char* plain_text, int shift, CipherText* ioCipher){
   }
 }
 
-//逆暗号化関数decipher
+//decode function 'decipher'
 //input... (&a, plain_text)
 //output... plain_text: HELLO WORLD
 void decipher(const CipherText* cipher, char* plain_text){
